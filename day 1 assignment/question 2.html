@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between var,let and const</title>
+</head>
+<body>
+    <h1>Difference Between Var,Let and Const</h1><p>click f12 to see the output in console and then click the output for var,let and const</p>
+   <p><h1>var</h1></p>
+<p>The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable.
+</p>
+<p>Example: var a =10;<br>
+
+Variable declarations are processed before the execution of the code.<br>
+The scope of a JavaScript variable declared with var is its current execution context.<br>
+The scope of a JavaScript variable declared outside the function is global.<br>
+</p>
+    <button onclick="varsample()">Var Output</button>
+<p><h1>Let</h1></p>
+<p>The let statement declares a local variable in a block scope.<br> It is similar to var, in that we can optionally initialize the variable.
+</p>
+<p>Example: let a =10;<br>
+The let statement allows you to create a variable with the scope limited to the block on which it is used.<br>
+It is similar to the variable we declare in other languages like Java, .NET, etc.<br>
+   </p>
+   <button onclick="letsample()">Let Output</button>
+   <p><h1>const</h1></p>
+<p>const statement values can be assigned once and they cannot be reassigned.<br> The scope of const statement works similar to let statements.
+</p>
+<p>Example: const a =10;<br>
+As per usual, naming standards dictated that we declare the const variable in capital letters.<br> const a =10 will work the same way as the code given above.<br> Naming standards should be followed to maintain the code for the long run.<br></p>
+    <script>  
+      function varsample(){
+        console.log("Var Output")
+         var a =10;
+         console.log(a);  // output 10
+         if(true){
+            var a=20;
+            console.log(a); // output 20
+        }
+         console.log(a);  // output 20
+      }
+    </script>
+    <!--In the above code, you can find, when the variable is updated inside the if loop, 
+        that the value of variable "a" updated 20 globally, hence outside the if loop the value persists.
+         It is similar to the Global variable present in other languages. -->
+    <script>
+        function letsample(){
+        console.log("Let Output")
+        let a =10;
+        console.log(a);  // output 10
+        if(true){
+        let a=20;
+        console.log(a); // output 20
+        }
+        console.log(a);  // output 10
+       }
+    </script>
+	<!--function  letsample(){
+        let a =10;
+        let a =20; //throws syntax error
+        console.log(a); 
+      }-->
+      <!--Above function throws error Identifier 'a' has already been declared.-->
+    <script>
+        function constsample(){
+            console.log("Const tput")
+            const MY_VARIABLE =10;
+            console.log(MY_VARIABLE);  //output 10
+       }
+    </script>
+    <!--function constsample(){
+    const MY_VARIABLE =10;
+    console.log(MY_VARIABLE);  //output 10
+    MY_VARIABLE =20;           //throws type error
+    console.log(MY_VARIABLE); 
+    }-->
+    <!--The above function code will throw an error when we try to reassign the existing const variable.-->
+    <button onclick="constsample()">Const Output</button>
+</body>
+</html>
