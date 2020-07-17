@@ -1,0 +1,66 @@
+<html>
+   <head>
+       <title>Day 3 Assignment 3</title>
+       <h2>Question 3</h2 >
+        <h1>GRADES OF A STUDENT BASED ON MARKS</h1>
+        <h3>Click F12 to check output in console</h3>
+   </head>
+   <body>
+      <script>
+//using if else
+        document.write("using if else conditions<br>");
+           var marks=+prompt("please enter your marks");
+           if(marks>=90)
+          { 
+          console.log(`Marks are ${marks} and grade is "O"`);
+          document.write(`Marks are ${marks} and grade is "O"`);
+         }
+        else if(marks>80 && marks <90)
+          { 
+          console.log(`Marks are ${marks} and grade is "A"`);
+          document.write(`Marks are ${marks} and grade is "A"`);
+         }
+       else if(marks>70 && marks <=80)
+          { 
+          console.log(`Marks are ${marks} and grade is "B"`);
+         document.write(`Marks are ${marks} and grade is "B"`);
+         }
+       else if(marks>60 && marks <=70)
+          { 
+          console.log(`Marks are ${marks} and grade is "C"`);
+          document.write(`Marks are ${marks} and grade is "C"`);
+         }
+      else if(marks>50 && marks <=60)
+          { 
+          console.log(`Marks are ${marks} and grade is "D"`);
+          document.write(`Marks are ${marks} and grade is "D"`);
+         }
+     else if(marks>40 && marks <=50)
+          { 
+          console.log(`Marks are ${marks} and grade is "E"`);
+          document.write(`Marks are ${marks} and grade is "E"`);
+         }
+     else
+      {
+       console.log(`Marks are ${marks} and grade is "F"`);
+       document.write(`Marks are ${marks} and grade is "F"`);
+      } 
+document.write("<br>");
+document.write("using ternary<br>");
+
+//using terenary operator
+
+        var grade=(marks > 90)? "O":
+                           (marks >80 && marks<=90)? "A":
+                           (marks >70 && marks<=80)? "B":
+                           (marks >60 && marks<=70)? "C":
+                           (marks >50 && marks<=60)? "D":
+                           (marks >40 && marks<=50)? "E":"F";
+        console.log(`Marks are ${marks} and grade is "${grade}"`);
+        document.write(`Marks are ${marks} and grade is "${grade}"`);
+                           
+
+
+      </script>
+   </body>
+</html>
