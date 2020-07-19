@@ -1,0 +1,47 @@
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 4</title>
+        <meta charset="UTF-8">
+          </head>
+    <body>
+        <script>
+         let number1=+prompt("Enter the number1")
+         let number2=+prompt("Enter the number2")
+         let option=prompt("Enter the operation like Addition, Subtraction, Multiplication, Division, Square root, Percentage")
+        let resultNum;
+		   // Performing  operation
+           switch (option) {
+      case "Addition":
+        resultNum = number1 + number2;
+        break;
+
+      case "Subtraction":
+        resultNum = number1 - number2;
+        break;
+
+      case "Multiplication":
+        resultNum = number1 * number2;
+        break;
+
+      case "Division":
+        resultNum = number1 / number2;
+        break;
+    case "Square root":
+        resultNum =  Math.sqrt(number1);
+        break;
+        case "Percentage":
+        resultNum = (number1 / number2) * 100;
+        break;
+
+         default:
+        resultNum = theNum;
+    }
+
+console.log("Output is :",resultNum)
+prompt("Output is :",resultNum)
+        </script>
+       
+    </body>
+</html>

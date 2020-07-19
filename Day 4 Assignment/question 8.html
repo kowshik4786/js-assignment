@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 8</title>
+        <meta charset="UTF-8">        
+    </head>
+    <body>
+        <script>
+  const ask = (question, yes, no) => (confirm(question) ? yes() : no());
+ask(
+  'Do you agree?',
+  () => alert('You agreed.'),
+  () => alert('You canceled the execution.')
+);
+        </script>
+       
+    </body>
+</html>
