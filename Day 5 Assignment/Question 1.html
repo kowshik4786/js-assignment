@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1 </title>
+    <h1>Click F12 to Check Output</h1>
+</head>
+<body>
+   <script> 
+    let number = parseInt(prompt("Enter a positive number"));
+
+let array = [];
+
+for (let i = 1; i < number; i++) {
+  array.push(i);
+}
+console.log("Array of numbers" + array);
+
+let odd = array.filter((el) => el % 2 != 0);
+let oddCubes = array.filter((el) => el % 2 != 0).map((el) => el ** 2);
+console.log("Odd numbers:" + odd);
+console.log("Array of cubes:" + oddCubes);
+</script>
+</body>
+</html>
