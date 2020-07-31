@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Miniproject-Random Quote Generator</title>
+	<meta meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta charset="UTF-8"/>
+	<style>
+		body{
+			background-color: #fa0021e1;
+		}
+		h1,p {
+			text-align: center;
+			font-family: Helvetica;
+			padding:30px 80px;
+
+		}
+		button {
+			text-align: center;
+			margin-left: 40%; 
+			height: 45px;
+			width: 200px;
+			font-weight: bold;
+		}
+		h1 {
+			background-color: darkblue;
+			color:white;
+		}
+		button:hover{
+			background-color: red;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Your Quote is Displayed here</h1>
+	<p></p>
+	<button onclick="myfunction()" type="button">Try again</button>
+	<script>
+		var quote_arr=[ "If you want to achieve greatness stop asking for permission.--Anonymous",
+
+"Things work out best for those who make the best of how things work out.--John Wooden",
+
+"To live a creative life, we must lose our fear of being wrong.--Anonymous",
+
+"If you are not willing to risk the usual you will have to settle for the ordinary.--Jim Rohn",
+
+"Trust because you are willing to accept the risk, not because it's safe or certain.--Anonymous",
+
+"Take up one idea. Make that one idea your life--think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success.--Swami Vivekananda",
+
+"All our dreams can come true if we have the courage to pursue them.--Walt Disney",
+
+"Good things come to people who wait, but better things come to those who go out and get them.--Anonymous",
+
+"If you do what you always did, you will get what you always got.--Anonymous",
+
+"Success is walking from failure to failure with no loss of enthusiasm.--Winston Churchill"];
+		var para=document.querySelector("p");
+		/*let myfunction=()=>{
+				var quote=quote_arr[Math.floor(Math.random()*quote_arr.length)];
+				document.write(quote);
+			}
+		para.innerHTML=myfunction();*/
+		let myfunction=()=>{
+				var quote=quote_arr[Math.floor(Math.random()*quote_arr.length)];
+				para.innerHTML=quote;
+			}
+		myfunction();
+
+		//var btn=document.querySelector("button");
+		//btn.onclick=myfunction();
+
+	</script>
+</body>
